@@ -21,7 +21,9 @@ The AIM of this project is to design and make available a IMU setup and computat
 The `sic` project consist of the following sub-parts:
 
 - `sic_mpu9250_driver module`: this a the module to which the `MPU9250 IMU module` is interfaced/connected to via header pins. here's the link to the repo of the driver code -> [sic_mpu9250_driver_code](https://github.com/samuko-things-company/sic_mpu9250_driver_code). The module provides a USB serial communication interface using the FTDI programmer to connect with a PC or micro-computer to setup, calibrate, visualize, and use in projects. It also provides an I2C communication interface for microcontroller-based (Arduino) projects.
+
 ![sic_img](./docs/sic_img2.jpeg)
+
 - `sic_calibration_py_codes`: set of step by step codes to help calibrate, compute necessary covariances, and visualize the filtered readings of the IMU (`MPU9250 module`) connected to the **sic_mpu9250_driver module**. Here's the link to the repo -> [sic_calibration_py_codes](https://github.com/samuko-things-company/sic_calibration_py_codes)
 - `sic_pyserial_lib`: library that helps communicate with the already setup IMU (`MPU9250 module`) in you PC or microcomputer-based python projects. here's a link to the repo -> [sic_pyserial_lib](https://github.com/samuko-things-company/sic_pyserial_lib) 
 - `sic_ros2_interface`: ros2 package to help communicate with the already setup IMU (`MPU9250 module`) in your ROS2-based projects **(currently implemented in ROS2-humble LTS)**. here's a link to the repo -> [sic_ros2_interface](https://github.com/samuko-things-company/sic_ros2_interface) 
