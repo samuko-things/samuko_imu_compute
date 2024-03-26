@@ -18,7 +18,7 @@ The AIM of `sic_mpu9250` project is to design and make available an easy interfa
 <br/>
 The `sic_mpu9250` project consist of the following sub-parts:
 
-- **`sic_mpu9250_driver module`**: this a the pysical module to which the `MPU9250 IMU module` is interfaced/connected to via header pins. The module provides a USB serial communication interface using the FTDI programmer to connect with a PC or micro-computer to setup, calibrate, visualize, and use in projects. It also provides an I2C communication interface for microcontroller-based (Arduino) projects.
+- **`sic_mpu9250_driver module`**: this a the physical module to which the `MPU9250 IMU module` is interfaced/connected to via header pins. The module provides a USB serial communication interface using the FTDI programmer to connect with a PC or micro-computer to setup, calibrate, visualize, and use in projects. It also provides an I2C communication interface for microcontroller-based (Arduino) projects.
 
 ![sic_img](./docs/sic_img2.jpeg)
 
@@ -26,11 +26,11 @@ The `sic_mpu9250` project consist of the following sub-parts:
 
 - **`sic_mpu9250_setup_py_codes`**: set of step by step codes to help calibrate, compute necessary covariances, and visualize the filtered readings of the IMU (`MPU9250 module`) connected to the `sic_mpu9250_driver module`. Here's the link to the repo -> [sic_mpu9250_setup_py_codes](https://github.com/samuko-things-company/sic_mpu9250_setup_py_codes)
 
-- **`sic_mpu9250 ros2 package`**: This is used with the ros2 imu_tools package. It connects the calibrated MPU9250 with the ros2 imu tools package to get filtered imu data readings (using the madgwick filter). It requres that the `calibration code` is running on the `sic_mpu9250_driver module`. Here's a link to the repo -> [sic_mpu9250](https://github.com/samuko-things-company/sic_mpu9250) 
+- **`sic_mpu9250_ros2 package`**: This is used with the ros2 imu_tools package. It connects the calibrated MPU9250 with the ros2 imu tools package to get filtered imu data readings (using the madgwick filter). It requres that the `calibration code` is running on the `sic_mpu9250_driver module`. Here's a link to the repo -> [sic_mpu9250_ros2](https://github.com/samuko-things-company/sic_mpu9250_ros2) 
 
 - **`sic_mpu9250_i2c_lib`**: arduino library that helps communicate with the already setup IMU (`MPU9250 module`) via I2C ADDRESS - 0x68, in your arduino-based project (e.g Arduino nano, UNO, MEGA, ESP32, e.t.c). It requres that the `kalman filter code` is running on the `sic_mpu9250_driver module`. here's the link to the repo -> [sic_mpu9250_i2c_lib](https://github.com/samuko-things-company/sic_mpu9250_i2c_lib)
 
-- **`sic_mpu9250_py_lib`**: library that helps communicate with the already setup IMU (`MPU9250 module`) in you PC or microcomputer-based python projects. It requres that the `kalman filter code` is running on the `sic_mpu9250_driver module`. here's a link to the repo -> [sic_mpu9250_py_lib](https://github.com/samuko-things-company/sic_mpu9250_py_lib). Here's the cpp equivalent also -> [sic_mpu9250_cpp_lib](https://github.com/samuko-things-company/sic_mpu9250_cpp_lib)
+- **`sic_mpu9250_pyserial_lib`**: library that helps communicate with the already setup IMU (`MPU9250 module`) in you PC or microcomputer-based python projects. It requres that the `kalman filter code` is running on the `sic_mpu9250_driver module`. here's a link to the repo -> [sic_mpu9250_pyserial_lib](https://github.com/samuko-things-company/sic_mpu9250_pyserial_lib). Here's the cpp equivalent also -> [sic_mpu9250_cppserial_lib](https://github.com/samuko-things-company/sic_mpu9250_cppserial_lib)
 
 <br/>
 <br/>
@@ -53,7 +53,7 @@ The `sic_mpu9250` project consist of the following sub-parts:
 - While the driver module still has the `calibration code` on it, you can use it with ros2-based project
   > NOTE: you can also upload the `calibration code` to the driver module.
 
-- to use with arduino-based or python/cpp based project, upload the `kalman filter` code to the `sic_mpu9250_driver module` and use with your prefered library - `sic_mpu9250_i2c_lib` or `sic_mpu9250_py_lib` or `sic_mpu9250_cpp_lib`.
+- to use with arduino-based or python/cpp based project, upload the `kalman filter` code to the `sic_mpu9250_driver module` and use with your prefered library - `sic_mpu9250_i2c_lib` or `sic_mpu9250_pyserial_lib` or `sic_mpu9250_cppserial_lib`.
 
 
 ## RESOURCES USED AND THEIR REFERENCES
