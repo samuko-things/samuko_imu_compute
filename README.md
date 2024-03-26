@@ -26,7 +26,7 @@ The `sic_mpu9250` project consist of the following sub-parts:
 
 - **`sic_mpu9250_setup_py_codes`**: set of step by step codes to help calibrate, compute necessary covariances, and visualize the filtered readings of the IMU (`MPU9250 module`) connected to the `sic_mpu9250_driver module`. Here's the link to the repo -> [sic_mpu9250_setup_py_codes](https://github.com/samuko-things-company/sic_mpu9250_setup_py_codes)
 
-- **`sic_mpu9250 ros2 package`**: This is used with the ros2 imu_tools package. It connects the calibrated MPU9250 with the ros2 imu tools package to get filtered imu data readings (using the madgwick filter). It requres that the `calibration code` is running on the `sic_mpu9250_driver module`. Here's a link to the repo -> [sic_mpu9250](https://github.com/samuko-things-company/sic_mpu9250) 
+- **`sic_mpu9250_ros2 package`**: This is used with the ros2 imu_tools package. It connects the calibrated MPU9250 with the ros2 imu tools package to get filtered imu data readings (using the madgwick filter). It requres that the `calibration code` is running on the `sic_mpu9250_driver module`. Here's a link to the repo -> [sic_mpu9250_ros2](https://github.com/samuko-things-company/sic_mpu9250_ros2) 
 
 - **`sic_mpu9250_i2c_lib`**: arduino library that helps communicate with the already setup IMU (`MPU9250 module`) via I2C ADDRESS - 0x68, in your arduino-based project (e.g Arduino nano, UNO, MEGA, ESP32, e.t.c). It requres that the `kalman filter code` is running on the `sic_mpu9250_driver module`. here's the link to the repo -> [sic_mpu9250_i2c_lib](https://github.com/samuko-things-company/sic_mpu9250_i2c_lib)
 
